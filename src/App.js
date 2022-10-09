@@ -22,7 +22,7 @@ const App = () => {
                                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                                 style={{
                                     background: "blue",
-                                    borderRadius: "50%"
+                                    borderRadius: "50%",
                                 }}
                             >
                                 <FiSettings size={32} />
@@ -38,11 +38,18 @@ const App = () => {
                             Sidebar Inactive
                         </div>
                     )}
-                    <div className={
-                        `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? "md:ml-72" : "flex-2"}`
-
-                    }>
-                        <div className="fixed md:static" bg-main-bg dark:bg-main-dark-bg navbar w-full>
+                    <div
+                        className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
+                            activeMenu ? "md:ml-72" : "flex-2"
+                        }`}
+                    >
+                        <div
+                            className="fixed md:static
+                            bg-main-bg
+                            dark:bg-main-dark-bg
+                            navbar
+                            w-full"
+                        >
                             Navbar
                         </div>
                     </div>
@@ -50,27 +57,30 @@ const App = () => {
                         <Routes>
                             <Route path="/" element="ECommerce" />
                             <Route path="/ecommerce" element="ECommerce" />
-                            
+
                             {/* Pages */}
-                            <Route path="/orders" element="Orders"/>
-                            <Route path="/employees" element="Employees"/>
-                            <Route path="/customers" element="Customers"/>
+                            <Route path="/orders" element="Orders" />
+                            <Route path="/employees" element="Employees" />
+                            <Route path="/customers" element="Customers" />
 
                             {/* Apps */}
-                            <Route path="/kanban" element="Kanban"/>
-                            <Route path="/Editor" element="Editor"/>
-                            <Route path="/calendar" element="Calendar"/>
-                            <Route path="/color-picker" element="ColorPicker"/>
+                            <Route path="/kanban" element="Kanban" />
+                            <Route path="/Editor" element="Editor" />
+                            <Route path="/calendar" element="Calendar" />
+                            <Route path="/color-picker" element="ColorPicker" />
 
                             {/* Charts */}
-                            <Route path="/line" element="Line"/>
-                            <Route path="/area" element="Area"/>
-                            <Route path="/bar" element="Bar"/>
-                            <Route path="/pie" element="Pie"/>
-                            <Route path="/financial" element="Financial"/>
-                            <Route path="/color-mapping" element="ColorMapping"/>
-                            <Route path="/pyramid" element="Pyramid"/>
-                            <Route path="/stacked" element="Stacked"/>
+                            <Route path="/line" element="Line" />
+                            <Route path="/area" element="Area" />
+                            <Route path="/bar" element="Bar" />
+                            <Route path="/pie" element="Pie" />
+                            <Route path="/financial" element="Financial" />
+                            <Route
+                                path="/color-mapping"
+                                element="ColorMapping"
+                            />
+                            <Route path="/pyramid" element="Pyramid" />
+                            <Route path="/stacked" element="Stacked" />
                         </Routes>
                     </div>
                 </div>

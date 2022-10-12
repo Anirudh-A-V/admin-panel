@@ -80,7 +80,6 @@ const Navbar = () => {
         {clicked.notification && <Notification />}
         {clicked.userProfile && <UserProfile />}
 
-
       </div>
     </div>
   )

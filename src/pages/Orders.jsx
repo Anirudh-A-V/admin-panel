@@ -12,9 +12,6 @@ const Orders = () => {
         dataSource={ordersData}
         allowPaging={true}
         allowSorting={true}
-        // toolbar={['pdf']}
-        // allowFiltering={true}
-        // allowGrouping={true}
         contextMenuItems={contextMenuItems}
         allowExcelExport={true}
         allowPdfExport={true}

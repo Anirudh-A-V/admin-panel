@@ -2,7 +2,7 @@ import React from 'react'
 import { BiRupee } from "react-icons/bi";
 import { GoPrimitiveDot } from "react-icons/go";
 
-import { Stacked, Pie, Button, Sparkline } from "../components";
+import { Stacked, Pie, Button, SparkLine } from "../components";
 import { earningData, SparklineAreaData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -90,12 +90,23 @@ const Ecommerce = () => {
                 </p>
               </div>
 
+              <div className='mt-5'>
+                <SparkLine
+                  data={SparklineAreaData}
+                  id="line-sparkline"
+                  type='Line'
+                  height='80px'
+                  width='250px'
+                  currentColor='blue'
+                  color='blue'
+                />
+              </div>
               
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   )
 }

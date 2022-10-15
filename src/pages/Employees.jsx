@@ -7,22 +7,17 @@ import { Header } from "../components";
 const Employees = () => {
   return (
     <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
-      <Header category='Page' title='Orders' />
+      <Header category='Page' title='Employees' />
       <GridComponent id='gridcomp'
         dataSource={employeesData}
         allowPaging={true}
         allowSorting={true}
         toolbar={['Search']}
         width='auto'
-        // allowFiltering={true}
-        // allowGrouping={true}
-        // allowExcelExport={true}
-        // allowPdfExport={true}
-        // allowResizing={true}
       >
         <ColumnsDirective>
           {employeesGrid.map((item, index) => 
-            <ColumnDirective key={index} template={item.template} field={item.field} headerText={item.headerText} width={item.width} textAlign={item.textAlign} />
+            <ColumnDirective key={index} template={item.template} field={item.field} headerText={item.headerText} width={item.width} textAlign={item.textAlign} format={item.format} />
           )}
         </ColumnsDirective>
         <Inject services={[Page, Search, Toolbar]} />

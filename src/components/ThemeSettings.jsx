@@ -7,8 +7,8 @@ import { themeColors } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSettings = () => {
-
-  const { setColor, setMode, currentMode, currentColor, setThemeSettings } = useStateContext();
+  const { setColor, setMode, currentMode, currentColor, setThemeSettings } =
+    useStateContext();
 
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
@@ -33,29 +33,35 @@ const ThemeSettings = () => {
 
           <div className="mt-4">
             <input
-              type='radio'
-              id='light'
-              name='theme'
-              value='light'
-              className='cursor-pointer'
-              onChange={() => { }}
-              checked={true}
+              type="radio"
+              id="light"
+              name="theme"
+              value="light"
+              className="cursor-pointer"
+              onChange={setMode}
+              checked={currentMode === "light"}
             />
-            <label htmlFor="light" className="ml-2 text-md cursor-pointer">
+            <label
+              htmlFor="light"
+              className="ml-2 text-md cursor-pointer"
+            >
               Light
             </label>
           </div>
           <div className="mt-4">
             <input
-              type='radio'
-              id='dark'
-              name='theme'
-              value='Dark'
-              className='cursor-pointer'
-              onChange={() => { }}
-              checked={true}
+              type="radio"
+              id="dark"
+              name="theme"
+              value="Dark"
+              className="cursor-pointer"
+              onChange={setMode}
+              checked={currentMode === "dark"}
             />
-            <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
+            <label
+              htmlFor="dark"
+              className="ml-2 text-md cursor-pointer"
+            >
               Dark
             </label>
           </div>
@@ -66,15 +72,21 @@ const ThemeSettings = () => {
 
           <div className="flex gap-2">
             {themeColors.map((item, index) => (
-              <TooltipComponent key={index} content={item.name} position='TopCenter'>
+              <TooltipComponent
+                key={index}
+                content={item.name}
+                position="TopCenter"
+              >
                 <div className="relative mt-2 cursor-pointer flex gap-2 items-center">
                   <button
                     type="button"
-                    className='h-10 w-10 rounded-full cursor-pointer'
+                    className="h-10 w-10 rounded-full cursor-pointer"
                     style={{ backgroundColor: item.color }}
-                    onClick={() => {}}
+                    onClick={() => setColor(item.color)}
                   >
-                    <BsCheck className={`ml-2 text-2xl text-white ${true ? 'block' : 'hidden'}`} />
+                    <BsCheck
+                      className={`ml-2 text-2xl text-white ${item.color === currentColor ? "block" : "hidden"}`}
+                    />
                   </button>
                 </div>
               </TooltipComponent>

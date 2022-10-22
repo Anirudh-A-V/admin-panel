@@ -17,7 +17,7 @@ const ThemeSettings = () => {
           <p className="font-semibold text-lg">Settings</p>
           <button
             type="button"
-            onClick={() => setThemeSettings}
+            onClick={() => setThemeSettings(false)}
             style={{
               color: "rgb(153, 171, 180)",
               borderRadius: "50%",
@@ -61,13 +61,13 @@ const ThemeSettings = () => {
           </div>
         </div>
 
-        <div className="flex-col border-t-1 border-color p-4 ml-4">
+        <div className="flex-col border-t-1 border-color p-4 justify-center ">
           <p className="font-semibold text-lg">Theme Colors</p>
 
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             {themeColors.map((item, index) => (
               <TooltipComponent key={index} content={item.name} position='TopCenter'>
-                <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
+                <div className="relative mt-2 cursor-pointer flex gap-2 items-center">
                   <button
                     type="button"
                     className='h-10 w-10 rounded-full cursor-pointer'

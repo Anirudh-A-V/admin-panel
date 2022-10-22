@@ -8,7 +8,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSettings = () => {
 
-  const { activeMenu, setActiveMenu, clicked, setClicked, handleClick, screenSize, setScreenSize } = useStateContext();
+  const { setColor, setMode, currentMode, currentColor, setThemeSettings } = useStateContext();
 
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
@@ -17,7 +17,7 @@ const ThemeSettings = () => {
           <p className="font-semibold text-lg">Settings</p>
           <button
             type="button"
-            onClick={() => { }}
+            onClick={() => setThemeSettings}
             style={{
               color: "rgb(153, 171, 180)",
               borderRadius: "50%",

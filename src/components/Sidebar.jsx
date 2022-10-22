@@ -62,7 +62,7 @@ const Sidebar = () => {
                         to={`/${link.name}`}
                         key={link.name}
                         onClick={hancleCloseSidebar}
-                        style={({ isActive }) => isActive ? {backgroundColor: currentColor} : {backgroundColor: 'transparent'}}
+                        style={({ isActive }) => isActive ? {backgroundColor: currentColor} : {backgroundColor: ''}}
                         className={({ isActive }) => isActive ? activeLink : normalLink}
                       >
                         {link.icon}

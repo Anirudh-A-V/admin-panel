@@ -11,7 +11,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 
 const App = () => {
-    const { activeMenu } = useStateContext();
+    const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
 
     // const activeMenu = true;
 
@@ -31,6 +31,7 @@ const App = () => {
                                     background: "blue",
                                     borderRadius: "50%",
                                 }}
+                                onClick={() => setThemeSettings(true)}
                             >
                                 <FiSettings size={32} />
                             </button>
@@ -60,7 +61,8 @@ const App = () => {
                         </div>
 
                         <div>
-                            <ThemeSettings />
+                            {themeSettings && <ThemeSettings />}
+                            
                             <Routes>
                                 <Route path="/" element={<Ecommerce />} />
                                 <Route path="/ecommerce" element={<Ecommerce />} />

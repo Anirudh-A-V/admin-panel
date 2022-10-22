@@ -36,10 +36,10 @@ const ThemeSettings = () => {
               type="radio"
               id="light"
               name="theme"
-              value="light"
+              value="Light"
               className="cursor-pointer"
               onChange={setMode}
-              checked={currentMode === "light"}
+              checked={currentMode === "Light"}
             />
             <label
               htmlFor="light"
@@ -56,7 +56,7 @@ const ThemeSettings = () => {
               value="Dark"
               className="cursor-pointer"
               onChange={setMode}
-              checked={currentMode === "dark"}
+              checked={currentMode === "Dark"}
             />
             <label
               htmlFor="dark"

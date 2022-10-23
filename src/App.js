@@ -13,8 +13,6 @@ import "./App.css";
 const App = () => {
     const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
 
-    // const activeMenu = true;
-
     return (
         <div className={currentMode === 'Dark' ? 'dark' : ''}>
             <BrowserRouter>
@@ -62,7 +60,7 @@ const App = () => {
 
                         <div>
                             {themeSettings && <ThemeSettings />}
-                            
+
                             <Routes>
                                 <Route path="/" element={<Ecommerce />} />
                                 <Route path="/ecommerce" element={<Ecommerce />} />

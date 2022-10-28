@@ -12,6 +12,8 @@ registerLicense(process.env.REACT_APP_SYNCFUSION_LICENSE_KEY);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <ContextProvider>
-    <App />
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
     </ContextProvider>
 );
